@@ -1,0 +1,67 @@
+@page
+@using ChinookEntities
+@model project.Pages.InsertAlbum;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert New Album</title>
+
+
+
+
+</head>
+<body>
+
+    <form action="~/Insert" method="post">
+        @Html.AntiForgeryToken()
+        <p>Album Name: <input type="text" name="tbxAlbum"></p>
+        <p>Artist Name: <input type="text" name="tbxArtist"></p>
+      
+     <button id="add-track">Add Track</button>
+    <div id="tracks-container">
+        <!-- Input fields will be dynamically added here -->
+    </div>
+
+    
+        <p><input type="submit" value="Insert"></p>
+    </form>
+
+
+@* jquery for adding and removing tracks dynamically  *@
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    
+let trackCounter = 0;
+
+
+$('#add-track').click(function(event) {
+    event.preventDefault();
+
+    trackCounter++;
+    
+
+    const track = $('<div class="track">');
+    const inputField = $('<input>').attr('type', 'text').attr('placeholder', `Track ${trackCounter}`)
+    .attr('id', `tbxTrack${trackCounter}`);
+    const removeButton = $('<button>').text('Remove');
+    
+    // remove track button 
+    removeButton.click(function() {
+        track.remove();
+    });
+    
+    
+    track.append(inputField).append(removeButton);
+    
+    
+    $('#tracks-container').append(track);
+});
+
+</script>
+    
+</body>
+</html>

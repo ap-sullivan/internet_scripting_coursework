@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Gnb81DQR8kojgNIANlGLKwoS7n5k7Q52OO45K6v6HFM=",
+  "Hash": "5rYbZVpkOtAJSPN2eePDfSUsKayta5/bZ+8goBDSDAY=",
   "Source": "project",
   "BasePath": "_content/project",
   "Mode": "Default",
@@ -15,5 +15,25 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/css/style.css",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/",
+      "BasePath": "_content/project",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/style.css"
+    }
+  ]
 }

@@ -1,26 +1,17 @@
 @page
+@{
+    ViewData["Title"] = "Home";
+}
 @using ChinookEntities
 @model project.Pages.InsertAlbum;
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert New Album</title>
-
-
-
-
-</head>
-<body>
 
     <form action="~/Insert" method="post">
         @Html.AntiForgeryToken()
         <p>Album Name: <input type="text" name="tbxAlbum"></p>
         <p>Artist Name: <input type="text" name="tbxArtist"></p>
       
-     <button id="add-track">Add Track</button>
+     <button id="add-track" type="button">Add Track</button>
     <div id="tracks-container">
         <!-- Input fields will be dynamically added here -->
     </div>
@@ -63,5 +54,3 @@ $('#add-track').click(function(event) {
 
 </script>
     
-</body>
-</html>

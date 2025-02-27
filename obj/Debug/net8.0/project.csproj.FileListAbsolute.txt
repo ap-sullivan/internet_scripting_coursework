@@ -57,3 +57,4 @@
 /Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/bin/Debug/net8.0/runtimes/win-x86/native/e_sqlite3.dll
 /Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/obj/Debug/net8.0/project.csproj.AssemblyReference.cache
 /Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/obj/Debug/net8.0/project.csproj.Up2Date
+/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/obj/Debug/net8.0/project.sourcelink.json

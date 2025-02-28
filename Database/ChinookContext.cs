@@ -5,10 +5,10 @@ namespace ChinookContext {
 
     public class ChinookDatabase : DbContext 
     {
-        public DbSet<Album> Albums { get; set; }
+        public DbSet<Album> Albums { get; set; }    
         public DbSet<Artist> Artists { get; set; }
         public DbSet<AlbumArtist> AlbumArtists { get; set; }
-        public DbSet<Tracks> Track { get; set; }
+        public DbSet<Tracks> Tracks { get; set; }
         
 
 
@@ -22,7 +22,7 @@ namespace ChinookContext {
         {
             // primary key for tracks within albums using the aldbum id and the trackid 
             modelBuilder.Entity<Tracks>()
-            .HasKey(t => new { t.TrackId, t.AlbumId });
+            .HasKey(t => new { t.TrackId });
 
             modelBuilder.Entity<AlbumArtist>().HasNoKey();
         }

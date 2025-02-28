@@ -1,9 +1,11 @@
 @page
 @{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Insert Record";
 }
 @using ChinookEntities
 @model project.Pages.InsertAlbum;
+
+<div class="page-container">
 
 
     <form action="~/Insert" method="post">
@@ -13,15 +15,19 @@
       
      <button id="add-track" type="button">Add Track</button>
     <div id="tracks-container">
-        <!-- Input fields will be dynamically added here -->
+        @* <input type="text" placeholder="Track 1" id="tbxTrack1" class="trackInput"> *@
+     
     </div>
 
     
         <p><input type="submit" value="Insert"></p>
     </form>
 
+        
+</div>
 
-@* jquery for adding and removing tracks dynamically  *@
+
+@* jquery for adding and removing tracks  *@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
@@ -36,13 +42,19 @@ $('#add-track').click(function(event) {
     
 
     const track = $('<div class="track">');
-    const inputField = $('<input>').attr('type', 'text').attr('placeholder', `Track ${trackCounter}`)
-    .attr('id', `tbxTrack${trackCounter}`);
+    const inputField = $('<input>')
+    .attr('type', 'text')
+    .attr('placeholder', `Track ${trackCounter}`)
+    .attr('name', `tbxTrack${trackCounter}`)
+    .attr('id', `tbxTrack${trackCounter}`)
+    .attr('class', 'trackInput');
+
     const removeButton = $('<button>').text('Remove');
     
-    // remove track button 
+   
     removeButton.click(function() {
         track.remove();
+        trackCounter--;
     });
     
     

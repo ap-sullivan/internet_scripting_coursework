@@ -22,10 +22,13 @@ namespace project.Pages
 
             string? albumTitle = Request.Form["tbxAlbum"];
             string? artistName = Request.Form["tbxArtist"];
+            // string? genre = Request.Form["tbxGenre"];
 
             // check if artist exists first
 
             var artist = db.Artists.FirstOrDefault(a => a.Name == artistName);
+
+            // if null is returned thn create new artist
             if (artist == null)
             {
                 artist = new Artist { Name = artistName };
@@ -39,11 +42,41 @@ namespace project.Pages
                 Title = albumTitle,
                 ArtistId = artist.ArtistId
             };
+
             db.Albums.Add(newAlbum);
+                        db.SaveChanges();
+
+
+            int trackNumber = 1;
+            Console.WriteLine("Form Keys Submitted:");
+foreach (var key in Request.Form.Keys)
+{
+    Console.WriteLine(key);
+}
+
+            while (Request.Form.ContainsKey($"tbxTrack{trackNumber}"))
+            {
+                string? trackName = Request.Form[$"tbxTrack{trackNumber}"];
+
+                    Console.WriteLine($"Processing track: {trackName}");  // Debugging output
+
+
+                if (!string.IsNullOrWhiteSpace(trackName))
+                {
+                    Tracks newTrack = new Tracks
+                    {
+                        Name = trackName,
+                        AlbumId = newAlbum.AlbumId,
+                        MediaTypeId = 1,
+                        UnitPrice = 0.99m, 
+                        Milliseconds = 999
+                    };
+                    db.Tracks.Add(newTrack);
+                }
+                trackNumber++;
+            }
+
             db.SaveChanges();
-
-
-
 
 
 

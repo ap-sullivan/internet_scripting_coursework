@@ -32,8 +32,9 @@ public int TrackId { get; set; }
 public string? Name { get; set; }
 public int AlbumId { get; set; }
 public int MediaTypeId { get; set; }
-public int GenreId { get; set; }
+// public int GenreId { get; set; }
 public decimal UnitPrice { get; set; }
+public int Milliseconds { get; set; }
 
 }
 

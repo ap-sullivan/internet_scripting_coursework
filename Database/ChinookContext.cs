@@ -21,8 +21,16 @@ namespace ChinookContext {
          protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // primary key for tracks within albums using the aldbum id and the trackid 
-            modelBuilder.Entity<Tracks>()
-            .HasKey(t => new { t.TrackId });
+    modelBuilder.Entity<Tracks>()
+        .HasKey(t => t.TrackId); 
+
+    // cascade delete to delete tracks as well as album 
+    modelBuilder.Entity<Tracks>()
+        .HasOne<Album>()
+        .WithMany()   
+        .HasForeignKey(t => t.AlbumId)
+        .OnDelete(DeleteBehavior.Cascade);
+
 
             modelBuilder.Entity<AlbumArtist>().HasNoKey();
         }

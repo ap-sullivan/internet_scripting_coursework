@@ -17,6 +17,12 @@
         Go to Insert Page
 </a>
 
+  @* <a href="/Insert">
+        Go to Insert Page
+</a> *@
+
+
+
 <p>TODO : Add in a quick filter by Artist and genre </p>
 
     <h1>@Model.Heading</h1>
@@ -27,6 +33,7 @@
             <th>Album ID</th>
             <th>Title</th>
             <th>Artist</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -36,6 +43,14 @@
                 <td>@albumArtist.AlbumId</td>
                 <td>@albumArtist.Title</td>
                 <td>@albumArtist.Name</td>
+                <td>
+
+                <form action="/Delete" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
             </tr>
         }
     </tbody>

@@ -48,17 +48,11 @@ namespace project.Pages
 
 
             int trackNumber = 1;
-            Console.WriteLine("Form Keys Submitted:");
-foreach (var key in Request.Form.Keys)
-{
-    Console.WriteLine(key);
-}
 
             while (Request.Form.ContainsKey($"tbxTrack{trackNumber}"))
             {
                 string? trackName = Request.Form[$"tbxTrack{trackNumber}"];
 
-                    Console.WriteLine($"Processing track: {trackName}");  // Debugging output
 
 
                 if (!string.IsNullOrWhiteSpace(trackName))
@@ -77,8 +71,6 @@ foreach (var key in Request.Form.Keys)
             }
 
             db.SaveChanges();
-
-
 
             return Redirect("~/Index");
         }

@@ -1,0 +1,34 @@
+@page "/update/{albumId}"
+@model project.Pages.UpdateAlbum
+
+@{
+    ViewData["Title"] = "Update Record";
+}
+ç
+<div class="page-container">
+
+<h1>Update Album</h1>
+
+
+@if (Model.Album != null)
+{
+    <form method="post">
+     
+        <div>
+            <label for="Title">Album Title:</label>
+            <input type="text" id="Title" name="Title" value="@Model.Album.Title" />
+        </div>
+
+    
+        <div>
+            <label for="ArtistName">Artist Name:</label>
+            <input type="text" id="ArtistName" name="ArtistName" value="@Model.Artist.Name" />
+        </div>
+
+        <button type="submit">Update</button>
+    </form>
+}
+
+
+
+</div>

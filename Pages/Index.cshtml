@@ -5,56 +5,65 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chinook</title>
 </head>
+
 <body>
 
 
-  <a href="/Insert">
+    <a href="/Insert">
         Go to Insert Page
-</a>
+    </a>
 
-  @* <a href="/Insert">
+    @* <a href="/Insert">
         Go to Insert Page
 </a> *@
 
 
 
-<p>TODO : Add in a quick filter by Artist and genre </p>
+    <p>TODO : Add in a quick filter by Artist and genre </p>
 
     <h1>@Model.Heading</h1>
 
-  <table border="1">
-    <thead>
-        <tr>
-            <th>Album ID</th>
-            <th>Title</th>
-            <th>Artist</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var albumArtist in Model.AlbumArtists)
-        {
+    <table border="1">
+        <thead>
             <tr>
-                <td>@albumArtist.AlbumId</td>
-                <td>@albumArtist.Title</td>
-                <td>@albumArtist.Name</td>
-                <td>
-
-                <form action="/Delete" method="post">
-                        @Html.AntiForgeryToken()
-                        <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId">
-                        <input type="submit" value="Delete">
-                    </form>
-                </td>
+                <th>Album ID</th>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Actions</th>
             </tr>
-        }
-    </tbody>
-</table>
-    
+        </thead>
+        <tbody>
+            @foreach (var albumArtist in Model.AlbumArtists)
+            {
+                <tr>
+                    <td>@albumArtist.AlbumId</td>
+                    <td>@albumArtist.Title</td>
+                    <td>@albumArtist.Name</td>
+                    <td>
+
+                        <form action="/Delete" method="post">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId">
+                            <input type="submit" value="Delete">
+                        </form>
+
+                        <form action="/update/@albumArtist.AlbumId" method="get">
+                            @* @Html.AntiForgeryToken() *@
+                            @* <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId"> *@
+                            <input type="submit" value="Update">
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
 </body>
+
 </html>

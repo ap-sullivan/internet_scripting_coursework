@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets/css/style.css"
     },
     {
+      "Id": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/images/chinook.png",
+      "PackagePath": "staticwebassets/images/chinook.png"
+    },
+    {
+      "Id": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/images/chinook_no_bg.png",
+      "PackagePath": "staticwebassets/images/chinook_no_bg.png"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.project.props",
       "PackagePath": "build\\project.props"
     },

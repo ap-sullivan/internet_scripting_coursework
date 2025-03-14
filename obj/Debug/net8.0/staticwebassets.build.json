@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5rYbZVpkOtAJSPN2eePDfSUsKayta5/bZ+8goBDSDAY=",
+  "Hash": "BgUFI45CdBaZPCCbnFwaZzczTvi6RInhfGsTe8OJgzo=",
   "Source": "project",
   "BasePath": "_content/project",
   "Mode": "Default",
@@ -34,6 +34,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/style.css"
+    },
+    {
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/images/chinook_no_bg.png",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/",
+      "BasePath": "_content/project",
+      "RelativePath": "images/chinook_no_bg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/chinook_no_bg.png"
+    },
+    {
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/images/chinook.png",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/",
+      "BasePath": "_content/project",
+      "RelativePath": "images/chinook.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/chinook.png"
     }
   ]
 }

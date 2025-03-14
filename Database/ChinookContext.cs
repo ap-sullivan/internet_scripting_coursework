@@ -1,40 +1,41 @@
 using Microsoft.EntityFrameworkCore;
 using ChinookEntities;
 
-namespace ChinookContext {
+namespace ChinookContext
+{
 
-    public class ChinookDatabase : DbContext 
+    public class ChinookDatabase : DbContext
     {
-        public DbSet<Album> Albums { get; set; }    
+        public DbSet<Album> Albums { get; set; }
         public DbSet<Artist> Artists { get; set; }
         public DbSet<AlbumArtist> AlbumArtists { get; set; }
         public DbSet<Tracks> Tracks { get; set; }
-        
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=chinook.db");
-            
+
         }
 
-         protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // primary key for tracks within albums using the aldbum id and the trackid 
-    modelBuilder.Entity<Tracks>()
-        .HasKey(t => t.TrackId); 
+            modelBuilder.Entity<Tracks>()
+                .HasKey(t => t.TrackId);
 
-    // cascade delete to delete tracks as well as album 
-    modelBuilder.Entity<Tracks>()
-        .HasOne<Album>()
-        .WithMany()   
-        .HasForeignKey(t => t.AlbumId)
-        .OnDelete(DeleteBehavior.Cascade);
+            // cascade delete to delete tracks as well as album 
+            modelBuilder.Entity<Tracks>()
+                .HasOne<Album>()
+                .WithMany()
+                .HasForeignKey(t => t.AlbumId)
+                .OnDelete(DeleteBehavior.Cascade);
 
 
             modelBuilder.Entity<AlbumArtist>().HasNoKey();
         }
-       
+
 
     }
 }

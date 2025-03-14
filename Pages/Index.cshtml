@@ -1,69 +1,28 @@
 @page
-@using ChinookEntities
-@model project.Pages.ViewAlbums;
-
+@{
+    ViewData["PageClass"] = "landing-page"; 
+}
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinook</title>
+    <title>Document</title>
 </head>
-
 <body>
+    <div class="landing-page">
+    <img src="images/chinook_no_bg.png" alt="Chinook Records logo width outline of helicopter and vinyl reocrds" class="landing-page-logo">
+    <h1 class="landing-page-title"> Welcome to Chinook Records</h1>
 
-
-    <a href="/Insert">
-        Go to Insert Page
+    @* ! TODO: Make this look like a button *@
+     <a href="/View">
+        View Records
     </a>
 
-    @* <a href="/Insert">
-        Go to Insert Page
-</a> *@
+    <button class="btn-primary">Enter Site</button>
 
 
-
-    <p>TODO : Add in a quick filter by Artist and genre </p>
-
-    <h1>@Model.Heading</h1>
-
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Album ID</th>
-                <th>Title</th>
-                <th>Artist</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var albumArtist in Model.AlbumArtists)
-            {
-                <tr>
-                    <td>@albumArtist.AlbumId</td>
-                    <td>@albumArtist.Title</td>
-                    <td>@albumArtist.Name</td>
-                    <td>
-
-                        <form action="/Delete" method="post">
-                            @Html.AntiForgeryToken()
-                            <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId">
-                            <input type="submit" value="Delete">
-                        </form>
-
-                        <form action="/update/@albumArtist.AlbumId" method="get">
-                            @* @Html.AntiForgeryToken() *@
-                            @* <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId"> *@
-                            <input type="submit" value="Update">
-                        </form>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-
+    </div>
 </body>
-
 </html>

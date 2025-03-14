@@ -1,40 +1,155 @@
 /* global styles */
 
-* {
+:root {
+  --color-primary-darkest: #3d3d3d  ;
+  --color-primary-dark: #7a7a7a;
+  --color-primary: #cccccc;
+  --color-primary-light: #d6d6d6;
+  --color-primary-lightest: #e6e6e6;
+  --color-white: #fafafa;
+  --color-black: #141414;
+  --color-error: #ff0000;
+}
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* ::selection { 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* ::selection { 
         background: var(--color-primary-light);} */
 }
-    
 
 html {
-    font-size: 62.5%;
- 
+  font-size: 62.5%;
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace, sans-serif;
-    font-size: 1.6rem;
-    background-color: #e7e7e7
+  font-family: "Courier New", Courier, monospace, sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--color-primary-lightest);
 }
+
+nav {
+  font-size: 1.8rem;
+  height: 9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6rem;
+  background-color: var(--color-primary-light);
+  color: var(--color-black);
+}
+
+.logo {
+  height: 9rem;
+  width: auto;
+  margin-left: 2rem;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: 1rem;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+.landing-page header, 
+.landing-page footer {
+display: none;
+  
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.landing-page-logo {
+  width: 50rem;
+  height: auto;
+}
+
+.btn-primary {
+
+  background-color: var(--color-primary-lightest);
+  border: 2px solid black;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.typewriter-button:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+
+
+
 
 
 .page-container {
-    min-height: 100vh;
-    padding: 6rem;
+  min-height: 100vh;
+  padding: 6rem;
 }
-
 
 /* insert record page */
 
 #add-track {
-    margin: 1rem 0rem;
+  margin: 1rem 0rem;
 }
 
 .trackInput {
-    margin: 0rem 1rem 1rem 0rem;
-    
+  margin: 0rem 1rem 1rem 0rem;
+}
+
+/* update album */
+
+.form-container {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.update-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+ 
+}
+
+.update-form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.update-label {
+    font-weight: 600;
+  width: 15rem;
+}
+
+.update-input {
+    width: 20rem;
+    padding: 2px;
 }

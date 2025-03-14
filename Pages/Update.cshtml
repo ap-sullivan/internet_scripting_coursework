@@ -4,30 +4,60 @@
 @{
     ViewData["Title"] = "Update Record";
 }
-ç
+
 <div class="page-container">
-
-<h1>Update Album</h1>
-
-
-@if (Model.Album != null)
-{
-    <form method="post">
-     
-        <div>
-            <label for="Title">Album Title:</label>
-            <input type="text" id="Title" name="Title" value="@Model.Album.Title" />
-        </div>
-
     
-        <div>
-            <label for="ArtistName">Artist Name:</label>
-            <input type="text" id="ArtistName" name="ArtistName" value="@Model.Artist.Name" />
-        </div>
+   
 
-        <button type="submit">Update</button>
-    </form>
-}
+
+    @if (Model.Album != null)
+    {
+        <div class="form-container">
+
+  <h1>Update Album</h1>
+        <form method="post" class="update-form">
+            @Html.AntiForgeryToken()
+
+            @* hidden fields *@
+            <div class="">
+                <input type="hidden" name="updtAlbumId" value="@Model.Album!.AlbumId">
+            </div>
+            <div class="">
+
+                <input type="hidden" name="updtArtistId" value="@Model.Artist!.ArtistId">
+            </div>
+
+
+            <div class="update-form-group">
+                <label for="updateTitle" class="update-label">Album Title:</label>
+                <input type="text" id="updateTitle" name="updateTitle" value="@Model.Album.Title" class="update-input"/>
+            </div>
+
+
+            <div class="update-form-group">
+                <label for="updateName" class="update-label">Artist Name:</label>
+                <input type="text" id="updateName" name="updateName" value="@Model.Artist.Name" class="update-input" />
+            </div>
+
+            @{
+                int counter = 1;
+            }
+            @foreach (var track in Model.Tracks)
+            {
+                <div class="update-form-group">
+                    <label for="TrackName" class="update-label">Track @counter:</label>
+                    <input type="text" id="@track.TrackId" name="@track.TrackId" value="@track.Name" class="update-input"/>
+                </div>
+                counter++;
+
+
+            }
+
+            <button type="submit">Update</button>
+        </form>
+
+               </div>
+    }
 
 
 

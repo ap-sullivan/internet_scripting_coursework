@@ -15,14 +15,39 @@
     <img src="images/chinook_no_bg.png" alt="Chinook Records logo width outline of helicopter and vinyl reocrds" class="landing-page-logo">
     <h1 class="landing-page-title"> Welcome to Chinook Records</h1>
 
-    @* ! TODO: Make this look like a button *@
-     <a href="/View">
+
+     <a class="btn-primary" id="btn-primary" href="/View">
         View Records
     </a>
-
-    <button class="btn-primary">Enter Site</button>
+ 
+  
 
 
     </div>
+
+
+        <script>
+
+document.getElementById("btn-primary").addEventListener("click", function () {
+   
+    let overlay = document.createElement("div");
+    overlay.id = "radial-overlay";
+    document.body.appendChild(overlay);
+
+
+    setTimeout(() => {
+        overlay.style.transform = "translate(-50%, -50%) scale(2)";
+    }, 150);
+
+  
+    setTimeout(() => {
+        window.location.href = "view.html";
+    }, 7000);
+});
+     
+        
+        
+        </script>
+
 </body>
 </html>

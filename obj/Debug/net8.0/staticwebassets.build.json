@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BgUFI45CdBaZPCCbnFwaZzczTvi6RInhfGsTe8OJgzo=",
+  "Hash": "VZoT/Z0uXPfZ4/fd45JBPnMPrezq+0VwXgmDHEMs4+k=",
   "Source": "project",
   "BasePath": "_content/project",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/chinook.png"
+    },
+    {
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/js/script.js",
+      "SourceId": "project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/",
+      "BasePath": "_content/project",
+      "RelativePath": "js/script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/script.js"
     }
   ]
 }

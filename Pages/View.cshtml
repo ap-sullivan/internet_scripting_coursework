@@ -10,59 +10,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chinook</title>
+
 </head>
 
 <body>
 
 
-    <a href="/Insert">
-        Go to Insert Page
-    </a>
+    <div class="view-page-container">
 
-    @* <a href="/Insert">
-        Go to Insert Page
-</a> *@
+        <h1 class="view-main-heading">@Model.Heading</h1>
+
+        <div class="view-filters">
+            <form method="get " action="" class="view-filter-form">
+                <label for="filterArtist" class="view-filter-dropdown">filter by Artist:</label>
+
+                <select name="tbxArtist" id="filterArtist" class="view-filter-input">
+                    <option value="">- Select an Artist -</option>
+                    @foreach (var artist in Model.Artists.Select(a => a.Name).Distinct())
+                    {
+                        <option value="@artist"
+                            selected="@(Model.Request.Query["tbxArtist"] == artist ? "selected" : null)">
+                            @artist
+                        </option>
+                    }
+                </select>
+                <button type="submit" class="btn-primary btn-filter">Go</button>
+
+                <a href="/View" class="btn-secondary btn-clear">Clear</a>
+
+            </form>
+            <div class="view-insert-album">
+
+                <p>Add new album
+                </p>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon-add-new-album" id="add-new-album">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon-hide-add-new-album" id="hide-new-album">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+
+                </svg>
+
+            </div>
+
+
+            <form action="~/Insert" method="post" class="add-album" onsubmit="return confirmInsert()">
+                @Html.AntiForgeryToken()
+                <div class="add-album-inputs">
+                    <div class="add-album-label-wrap">
+                        <label for="tbxAlbum">Album Name:</label>
+                        <input type="text" name="tbxAlbum" required>
+                    </div>
+                    <div class="add-album-label-wrap">
+                        <label for="tbxArtist">Artist Name:</label>
+                         <input list="artists" name="tbxArtist" id="tbxArtist" required class="view-filter-input"
+                        value="@Model.Request.Query["tbxArtist"]">
+                    <datalist id="artists">
+                        <option value="">- Select an Artist -</option>
+                        @foreach (var artist in Model.Artists.Select(a => a.Name).Distinct())
+                        {
+                            <option value="@artist"></option>
+                        }
+                    </datalist>
+                    </div>
+
+                   
+                </div>
+
+
+                <div id="tracks-container">
+
+                </div>
+                <button id="add-track" type="button" class="btn-primary">Add track </button>
+
+                <button type="submit" value="Insert Album" class="btn-secondary">Insert Album</button>
+            </form>
 
 
 
-    <p>TODO : Add in a quick filter by Artist and genre </p>
+        </div>
 
-    <h1>@Model.Heading</h1>
-
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Album ID</th>
-                <th>Title</th>
-                <th>Artist</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var albumArtist in Model.AlbumArtists)
-            {
+        <table border="1" class="view-table">
+            <thead>
                 <tr>
-                    <td>@albumArtist.AlbumId</td>
-                    <td>@albumArtist.Title</td>
-                    <td>@albumArtist.Name</td>
-                    <td>
-
-                        <form action="/Delete" method="post">
-                            @Html.AntiForgeryToken()
-                            <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId">
-                            <input type="submit" value="Delete">
-                        </form>
-
-                        <form action="/update/@albumArtist.AlbumId" method="get">
-                            @Html.AntiForgeryToken()
-                            @* <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId"> *@
-                            <input type="submit" value="Update">
-                        </form>
-                    </td>
+                    <th class="view-table-albumID">Album ID</th>
+                    <th class="view-table-title">Title</th>
+                    <th class="view-table-artist">Artist</th>
+                    <th class="view-table-actions">Actions</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var albumArtist in Model.AlbumArtists)
+                {
+                    <tr>
+                        <td class="view-albumID">@albumArtist.AlbumId</td>
+                        <td class="view-title">@albumArtist.Title</td>
+                        <td class="view-album">@albumArtist.Name</td>
+                        <td class="view-actions">
+
+
+                            <form action="/update/@albumArtist.AlbumId" method="get">
+                                @Html.AntiForgeryToken()
+                                @* <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId"> *@
+                                <input type="submit" value="Update" class="btn-primary">
+                            </form>
+
+                            <form action="/Delete" method="post" onsubmit="return confirmDelete()">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId">
+                                <input type="submit" value="Delete" class="btn-secondary btn-danger">
+                            </form>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+
+    @* jquery for adding and removing tracks  *@
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        let trackCounter = 0;
+
+
+        $('#add-track').click(function (event) {
+            event.preventDefault();
+
+            trackCounter++;
+
+
+            const track = $('<div class="track">');
+            const inputLabel = $('<label>')
+                .attr('for', `tbxTrack${trackCounter}`)
+                .attr('class', 'track-label')
+                .text(`Track ${trackCounter}:`);
+            const inputField = $('<input>')
+                .attr('type', 'text')
+                .attr('placeholder', `Track ${trackCounter}`)
+                .attr('name', `tbxTrack${trackCounter}`)
+                .attr('id', `tbxTrack${trackCounter}`)
+                .attr('class', 'track-input');
+
+            const removeButton = $('<button>').text('Remove').attr('class', 'btn-primary btn-danger');
+
+
+            removeButton.click(function () {
+                track.remove();
+                trackCounter--;
+            });
+
+
+            track.append(inputLabel).append(inputField).append(removeButton);
+
+
+            $('#tracks-container').append(track);
+        });
+
+
+    </script>
+
 
 </body>
 

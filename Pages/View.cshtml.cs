@@ -18,8 +18,8 @@ namespace project.Pages
         public List<Artist>? Artists { get; set; }
         public List<AlbumArtist>? AlbumArtists { get; set; }
 
-
-        public void OnGet()
+        // retriving the album and artist data
+        public void OnGet(string? tbxArtist)
         {
             Heading = "Albums";
             ChinookDatabase db = new ChinookDatabase();
@@ -38,6 +38,80 @@ namespace project.Pages
         .ToList();
 
 
+            Artists = db.Artists
+            .OrderBy(a => a.Name)
+            .ToList();
+
+
+            if (!string.IsNullOrEmpty(tbxArtist))
+            {
+                AlbumArtists = AlbumArtists
+                    .Where(a => a.Name == tbxArtist)
+                    .ToList();
+            }
+
+
+        }
+
+        // adding new albums
+        public IActionResult OnPost()
+        {
+
+            ChinookDatabase db = new ChinookDatabase();
+
+            string? albumTitle = Request.Form["tbxAlbum"];
+            string? artistName = Request.Form["tbxArtist"];
+            // string? genre = Request.Form["tbxGenre"];
+
+            // check if artist exists first
+
+            var artist = db.Artists.FirstOrDefault(a => a.Name == artistName);
+
+            // if null is returned thn create new artist
+            if (artist == null)
+            {
+                artist = new Artist { Name = artistName };
+                db.Artists.Add(artist);
+                db.SaveChanges();
+            }
+
+            // create the album
+            Album newAlbum = new Album
+            {
+                Title = albumTitle,
+                ArtistId = artist.ArtistId
+            };
+
+            db.Albums.Add(newAlbum);
+            db.SaveChanges();
+
+
+            int trackNumber = 1;
+
+            while (Request.Form.ContainsKey($"tbxTrack{trackNumber}"))
+            {
+                string? trackName = Request.Form[$"tbxTrack{trackNumber}"];
+
+
+
+                if (!string.IsNullOrWhiteSpace(trackName))
+                {
+                    Tracks newTrack = new Tracks
+                    {
+                        Name = trackName,
+                        AlbumId = newAlbum.AlbumId,
+                        MediaTypeId = 1,
+                        UnitPrice = 0.99m,
+                        Milliseconds = 999
+                    };
+                    db.Tracks.Add(newTrack);
+                }
+                trackNumber++;
+            }
+
+            db.SaveChanges();
+
+            return Redirect("~/Index");
         }
     }
 

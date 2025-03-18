@@ -28,7 +28,7 @@ namespace project.Pages
 
             db.SaveChanges();
 
-            return Redirect("/Delete");
+            return Redirect("/View");
 
 
         }

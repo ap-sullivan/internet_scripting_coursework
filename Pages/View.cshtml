@@ -3,18 +3,9 @@
 @model project.Pages.ViewAlbums;
 
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinook</title>
-
-</head>
-
-<body>
-
+@{
+    ViewData["Title"] = "View Records";
+}
 
     <div class="view-page-container">
 
@@ -89,10 +80,8 @@
                 </div>
                 <button id="add-track" type="button" class="btn-primary">Add track </button>
 
-                <button type="submit" value="Insert Album" class="btn-secondary">Insert Album</button>
+                <button type="submit" value="Insert Album" class="btn-secondary btn-success">Insert Album</button>
             </form>
-
-
 
         </div>
 
@@ -118,7 +107,7 @@
                             <form action="/update/@albumArtist.AlbumId" method="get">
                                 @Html.AntiForgeryToken()
                                 @* <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId"> *@
-                                <input type="submit" value="Update" class="btn-primary">
+                                <input type="submit" value="View/Update" class="btn-primary">
                             </form>
 
                             <form action="/Delete" method="post" onsubmit="return confirmDelete()">
@@ -184,6 +173,5 @@
     </script>
 
 
-</body>
 
 </html>

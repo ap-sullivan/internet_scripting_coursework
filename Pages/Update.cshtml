@@ -15,7 +15,7 @@
         <div class="form-container">
 
   <h1>Update Album</h1>
-        <form method="post" class="update-form">
+        <form method="post" class="update-form" onsubmit="return confirmUpdate()">
             @Html.AntiForgeryToken()
 
             @* hidden fields *@
@@ -23,7 +23,6 @@
                 <input type="hidden" name="updtAlbumId" value="@Model.Album!.AlbumId">
             </div>
             <div class="">
-
                 <input type="hidden" name="updtArtistId" value="@Model.Artist!.ArtistId">
             </div>
 
@@ -51,8 +50,10 @@
                 counter++;
 
             }
+               <div class="button-container">
 
-            <button type="submit">Update</button>
+            <button type="submit" class="btn-secondary btn-success">Update</button>
+               </div> 
         </form>
 
                </div>

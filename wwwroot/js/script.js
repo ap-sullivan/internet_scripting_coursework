@@ -7,6 +7,10 @@ function confirmInsert() {
     return confirm("Are you sure you want to add a new album?");
 }
 
+function confirmUpdate() {
+    return confirm("Are you sure you want to confirm the updates?");
+}
+
 // show hide add album form
 
 const addIcon = document.getElementById("add-new-album");

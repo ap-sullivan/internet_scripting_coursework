@@ -61,7 +61,7 @@ namespace project.Pages
 
             string? albumTitle = Request.Form["tbxAlbum"];
             string? artistName = Request.Form["tbxArtist"];
-            // string? genre = Request.Form["tbxGenre"];
+           
 
             // check if artist exists first
 

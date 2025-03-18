@@ -84,7 +84,7 @@ namespace project.Pages
             }
             db.SaveChanges();
 
-      return RedirectToPage("/Index");
+      return RedirectToPage("/View");
         }
 
 

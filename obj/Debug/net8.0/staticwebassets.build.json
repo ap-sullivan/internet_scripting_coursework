@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VZoT/Z0uXPfZ4/fd45JBPnMPrezq+0VwXgmDHEMs4+k=",
+  "Hash": "ockA7PDs1jabeKV8s94KHTBEmeEb3cdtMKJDdRVS/8I=",
   "Source": "project",
   "BasePath": "_content/project",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "project/wwwroot",
       "Source": "project",
-      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/wwwroot/",
       "BasePath": "_content/project",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/css/style.css",
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/wwwroot/css/style.css",
       "SourceId": "project",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/wwwroot/",
       "BasePath": "_content/project",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot/css/style.css"
     },
     {
-      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/images/chinook_no_bg.png",
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/wwwroot/images/chinook_no_bg.png",
       "SourceId": "project",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/wwwroot/",
       "BasePath": "_content/project",
       "RelativePath": "images/chinook_no_bg.png",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot/images/chinook_no_bg.png"
     },
     {
-      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/images/chinook.png",
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/wwwroot/images/chinook.png",
       "SourceId": "project",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/wwwroot/",
       "BasePath": "_content/project",
       "RelativePath": "images/chinook.png",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot/images/chinook.png"
     },
     {
-      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/js/script.js",
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/wwwroot/js/script.js",
       "SourceId": "project",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/wwwroot/",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/wwwroot/",
       "BasePath": "_content/project",
       "RelativePath": "js/script.js",
       "AssetKind": "All",

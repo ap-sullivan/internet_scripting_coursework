@@ -1184,11 +1184,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/project.csproj",
+      "projectUniqueName": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/project.csproj",
       "projectName": "project",
-      "projectPath": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/project.csproj",
+      "projectPath": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/project.csproj",
       "packagesPath": "/Users/andrew/.nuget/packages/",
-      "outputPath": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwo/project/obj/",
+      "outputPath": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/andrew/.nuget/NuGet/NuGet.Config"

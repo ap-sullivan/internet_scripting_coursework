@@ -1,14 +1,22 @@
 // confirm delete
 function confirmDelete() {
-    return confirm("Are you sure you want to delete this album? This action cannot be undone");
+
+    if (confirm("Are you sure you want to delete this album? This action cannot be undone")) {
+        window.location.href = "/View";
+        return true;
+    } else {
+        return false;
+    }
+
 }
 
+// confirm add album
 function confirmInsert() {
     return confirm("Are you sure you want to add a new album?");
 }
 
 function confirmUpdate() {
-    return confirm("Are you sure you want to confirm the updates?");
+    return confirm("Album Updated");
 }
 
 // show hide add album form

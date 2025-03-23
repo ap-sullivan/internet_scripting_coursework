@@ -7,8 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using ChinookContext;
 using ChinookEntities;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.Reflection.Metadata.Ecma335;
+
 
 namespace project.Pages
 {
@@ -19,7 +18,7 @@ namespace project.Pages
 
         public Artist? Artist { get; set; }
 
-        public List<Artist> Artists { get; set; }
+        public List<Artist>? Artists { get; set; }
         public List<Tracks>? Tracks { get; set; }
 
         public IActionResult OnGet(int albumId)
@@ -53,7 +52,7 @@ namespace project.Pages
 
             if (updateAlbum == null)
             {
-               return NotFound();
+                return NotFound();
             }
 
             // update album title
@@ -65,7 +64,7 @@ namespace project.Pages
 
             if (updateArtist != null)
             {
-             updateArtist.Name = Request.Form["updateName"];
+                updateArtist.Name = Request.Form["updateName"];
             }
 
             // update the tracks
@@ -74,7 +73,8 @@ namespace project.Pages
                 .Where(t => t.AlbumId == albumId)
                 .ToList();
 
-            foreach (var track in tracks) {
+            foreach (var track in tracks)
+            {
 
                 string key = track.TrackId.ToString();
                 if (Request.Form.ContainsKey(key))
@@ -82,9 +82,13 @@ namespace project.Pages
                     track.Name = Request.Form[key];
                 }
             }
+
+            // save changes in db
             db.SaveChanges();
 
-      return RedirectToPage("/View");
+        // reload the page with updated data
+         return RedirectToPage("/Update", new { a = albumId });
+
         }
 
 

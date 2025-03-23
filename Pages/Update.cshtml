@@ -7,7 +7,7 @@
 
 <div class="page-container">
     
-   
+   <div class="update-content-container">
 
 
     @if (Model.Album != null)
@@ -15,7 +15,7 @@
         <div class="form-container">
 
   <h1>Update Album</h1>
-        <form method="post" class="update-form" onsubmit="return confirmUpdate()">
+        <form method="post" class="update-form" onsubmit="return confirm('Are you sure you want to update this record?');">
             @Html.AntiForgeryToken()
 
             @* hidden fields *@
@@ -29,13 +29,13 @@
 
             <div class="update-form-group">
                 <label for="updateTitle" class="update-label">Album Title:</label>
-                <input type="text" id="updateTitle" name="updateTitle" value="@Model.Album.Title" class="update-input"/>
+                <input type="text" id="updateTitle" name="updateTitle" value="@Model.Album.Title" class="update-input" required/>
             </div>
 
 
             <div class="update-form-group">
                 <label for="updateName" class="update-label">Artist Name:</label>
-                <input type="text" id="updateName" name="updateName" value="@Model.Artist.Name" class="update-input" />
+                <input type="text" id="updateName" name="updateName" value="@Model.Artist.Name" class="update-input" required />
             </div>
 
             @{
@@ -55,10 +55,14 @@
             <button type="submit" class="btn-secondary btn-success">Update</button>
                </div> 
         </form>
-
+          
                </div>
     }
 
+  <a href="/View" class="btn-primary btn-back-to-view">Back to View</a>
 
+     </div>
 
 </div>
+
+    <script src="js/script.js"></script>

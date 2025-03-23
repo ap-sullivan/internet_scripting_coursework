@@ -8,12 +8,15 @@
 }
 
     <div class="view-page-container">
+        
 
         <h1 class="view-main-heading">@Model.Heading</h1>
 
         <div class="view-filters">
+
+            <div class="filter-search">
             <form method="get " action="" class="view-filter-form">
-                <label for="filterArtist" class="view-filter-dropdown">filter by Artist:</label>
+                <label for="filterArtist" class="view-filter-dropdown">Filter by Artist:</label>
 
                 <select name="tbxArtist" id="filterArtist" class="view-filter-input">
                     <option value="">- Select an Artist -</option>
@@ -25,11 +28,48 @@
                         </option>
                     }
                 </select>
+                <div class="filter-buttons">
+
+             
                 <button type="submit" class="btn-primary btn-filter">Go</button>
 
                 <a href="/View" class="btn-secondary btn-clear">Clear</a>
-
+   </div>
             </form>
+
+            <form method="get" class="view-filter-form">
+                <label for="search" class="view-filter-dropdown">Search Album/Artist:</label>
+                <input type="text" name="search" placeholder="Search album or artist..." value="@Request.Query["search"]" class="view-search-input"/>
+                 <div class="filter-buttons">
+                <button type="submit" class="btn-primary btn-filter">Search</button>
+                <a href="/View" class="btn-secondary btn-clear">Clear</a>
+                </div>
+            </form>
+        </div>
+                <div class="sort-filters">
+
+            <form method="get">
+                <input type="hidden" name="sortAZ" value="artist" />
+                <button type="submit" class="btn-primary btn-filter">Sort by Artist A-Z</button>
+            </form>
+
+            <form method="get">
+                <input type="hidden" name="sortZA" value="artist" />
+                <button type="submit" class="btn-primary btn-filter">Sort by Artist Z-A</button>
+            </form>
+
+            <form method="get">
+                <input type="hidden" name="sortAZ" value="album" />
+                <button type="submit" class="btn-primary btn-filter">Sort by Album A-Z</button>
+            </form>
+
+             <form method="get">
+                <input type="hidden" name="sortZA" value="album" />
+                <button type="submit" class="btn-primary btn-filter ">Sort by Album Z-A</button>
+            </form>
+                </div>
+                 <a href="/View" class="btn-secondary btn-clear">Clear</a>
+
             <div class="view-insert-album">
 
                 <p>Add new album
@@ -54,11 +94,7 @@
             <form action="~/Insert" method="post" class="add-album" onsubmit="return confirmInsert()">
                 @Html.AntiForgeryToken()
                 <div class="add-album-inputs">
-                    <div class="add-album-label-wrap">
-                        <label for="tbxAlbum">Album Name:</label>
-                        <input type="text" name="tbxAlbum" required>
-                    </div>
-                    <div class="add-album-label-wrap">
+                     <div class="add-album-label-wrap">
                         <label for="tbxArtist">Artist Name:</label>
                          <input list="artists" name="tbxArtist" id="tbxArtist" required class="view-filter-input"
                         value="@Model.Request.Query["tbxArtist"]">
@@ -70,6 +106,11 @@
                         }
                     </datalist>
                     </div>
+                    <div class="add-album-label-wrap">
+                        <label for="tbxAlbum">Album Name:</label>
+                        <input class="view-filter-input" type="text" name="tbxAlbum" required>
+                    </div>
+                   
 
                    
                 </div>
@@ -85,11 +126,18 @@
 
         </div>
 
+        @if (!Model.AlbumArtists.Any())
+{
+    <div class="view-no-albums">
+        <p> No albums found for this artist.</p>
+           <a href="/View" class="btn-secondary btn-clear">Clear</a>
+    </div>
+} else {
         <table border="1" class="view-table">
             <thead>
                 <tr>
                     <th class="view-table-albumID">Album ID</th>
-                    <th class="view-table-title">Title</th>
+                    <th class="view-table-title">Album Title</th>
                     <th class="view-table-artist">Artist</th>
                     <th class="view-table-actions">Actions</th>
                 </tr>
@@ -106,7 +154,6 @@
 
                             <form action="/update/@albumArtist.AlbumId" method="get">
                                 @Html.AntiForgeryToken()
-                                @* <input type="hidden" name="hdnAlbumID" value="@albumArtist.AlbumId"> *@
                                 <input type="submit" value="View/Update" class="btn-primary">
                             </form>
 
@@ -121,7 +168,7 @@
                 }
             </tbody>
         </table>
-
+}
     </div>
 
 

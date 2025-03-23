@@ -19,7 +19,7 @@ namespace project.Pages
         public List<AlbumArtist>? AlbumArtists { get; set; }
 
         // retriving the album and artist data
-        public void OnGet(string? tbxArtist)
+        public void OnGet(string? tbxArtist, string? search)
         {
             Heading = "Albums";
             ChinookDatabase db = new ChinookDatabase();
@@ -37,17 +37,65 @@ namespace project.Pages
             })
         .ToList();
 
-
+            // order by ascending
             Artists = db.Artists
             .OrderBy(a => a.Name)
             .ToList();
 
 
+            // filter artist function
             if (!string.IsNullOrEmpty(tbxArtist))
             {
                 AlbumArtists = AlbumArtists
-                    .Where(a => a.Name == tbxArtist)
+                    .Where(a => a.Name.Contains(tbxArtist))
                     .ToList();
+            }
+
+            // search function 
+
+               if (!string.IsNullOrWhiteSpace(search))
+    {
+        AlbumArtists = AlbumArtists
+            .Where(a =>
+                a.Title.Contains(search, StringComparison.OrdinalIgnoreCase) ||
+                a.Name.Contains(search, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+    }
+
+
+            // sort artist a-z function
+            {
+                string sort = Request.Query["sortAZ"];
+                if (sort == "artist")
+                {
+                    AlbumArtists = AlbumArtists
+                        .OrderBy(a => a.Name)
+                        .ToList();
+                }
+                else if (sort == "album")
+                {
+                    AlbumArtists = AlbumArtists
+                        .OrderBy(a => a.Title)
+                        .ToList();
+                }
+            }
+
+            // sort artist z-a function
+
+              {
+                string sort = Request.Query["sortZA"];
+                if (sort == "artist")
+                {
+                    AlbumArtists = AlbumArtists
+                        .OrderByDescending(a => a.Name)
+                        .ToList();
+                }
+                else if (sort == "album")
+                {
+                    AlbumArtists = AlbumArtists
+                        .OrderByDescending(a => a.Title)
+                        .ToList();
+                }
             }
 
 
@@ -85,13 +133,12 @@ namespace project.Pages
             db.Albums.Add(newAlbum);
             db.SaveChanges();
 
-
+// add the tracks
             int trackNumber = 1;
 
             while (Request.Form.ContainsKey($"tbxTrack{trackNumber}"))
             {
                 string? trackName = Request.Form[$"tbxTrack{trackNumber}"];
-
 
 
                 if (!string.IsNullOrWhiteSpace(trackName))

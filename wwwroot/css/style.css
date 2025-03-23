@@ -80,7 +80,6 @@ nav ul li a:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
   text-decoration: none;
 }
 
@@ -100,7 +99,6 @@ nav ul li a:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
   text-decoration: none;
 }
 
@@ -127,6 +125,9 @@ nav ul li a:hover {
 }
 
 footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
   background-color: var(--color-primary-light);
   color: var(--color-black);
   display: flex;
@@ -190,10 +191,9 @@ footer {
 /* view records page */
 
 .view-page-container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 2rem 16rem;
 }
 
@@ -214,6 +214,14 @@ footer {
   margin: 2rem 0 2rem 0;
 }
 
+.filter-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .view-filter-form {
   display: flex;
   justify-content: center;
@@ -223,14 +231,52 @@ footer {
 }
 
 .view-filter-dropdown {
+  /* text-align: ; */
   font-size: 1.8rem;
-  min-width: 16rem;
+  min-width: 24rem;
 }
 
 .view-filter-input {
-
   padding: 0.5rem;
-  min-width: 17rem;
+  min-width: 52rem;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.view-search-input{
+  height: 2.8rem;
+  padding: 3px;
+  font-size: 1.6rem;
+  min-width: 52rem;
+}
+
+.view-no-albums {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-error);
+}
+
+.view-no-albums p {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInOut 2s infinite;
+}
+
+.sort-filters {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .view-insert-album {
@@ -254,6 +300,10 @@ footer {
   color: var(--color-primary-darkest);
 }
 
+.icon-add-new-album {
+  animation: fadeInOut 5s infinite ease-in-out;
+}
+
 .icon-add-new-album:hover, .icon-hide-add-new-album:hover {
   opacity: .8 ;
   cursor: pointer;
@@ -265,7 +315,6 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-
 }
 
 .add-album-inputs {
@@ -282,7 +331,6 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-
 }
 
 .add-album-label-wrap label {
@@ -375,10 +423,6 @@ footer {
   }
 
 
-  .view-page-container {
-    padding: 2rem;
-  }
-
   .view-table {
     margin: 0 1rem;
   }
@@ -391,6 +435,14 @@ footer {
 }
 
 /* update album */
+
+.update-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
 
 .form-container {
   background-color: var(--color-primary-lightest);
@@ -439,3 +491,17 @@ footer {
   justify-content: flex-end;
   width: 100%;
 }
+
+.btn-back-to-view {
+  margin-top: 2rem;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+

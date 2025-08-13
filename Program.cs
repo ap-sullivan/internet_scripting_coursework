@@ -19,6 +19,7 @@ app.MapRazorPages();
 
 // Allow Azure to set the port
 var port = Environment.GetEnvironmentVariable("PORT") ?? "5073";
-app.Urls.Add($"http://*:{port}");
-    
+app.Urls = new[] { $"http://*:{port}" };
+
+
 app.Run();

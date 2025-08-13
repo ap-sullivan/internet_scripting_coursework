@@ -12,7 +12,7 @@
 
   <!-- Include the SQLite database in the publish output -->
   <ItemGroup>
-    <None Include="chinook.db" CopyToOutputDirectory="PreserveNewest" />
+<None Include="chinook.db" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>

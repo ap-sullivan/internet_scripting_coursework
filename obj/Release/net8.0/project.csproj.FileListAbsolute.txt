@@ -64,3 +64,8 @@
 /Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/bin/Release/net8.0/publish/project.deps.json
 /Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/bin/Release/net8.0/publish/project.runtimeconfig.json
 /Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/bin/Release/net8.0/chinook.db
+/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/bin/Release/net8.0/publish/publish/web.config
+/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/bin/Release/net8.0/publish/publish/appsettings.Development.json
+/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/bin/Release/net8.0/publish/publish/appsettings.json
+/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/bin/Release/net8.0/publish/publish/project.deps.json
+/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/bin/Release/net8.0/publish/publish/project.runtimeconfig.json

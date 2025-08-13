@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
+      "Id": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/images/chinook.png",
+      "PackagePath": "staticwebassets/images/chinook.png"
+    },
+    {
+      "Id": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/images/chinook_no_bg.png",
+      "PackagePath": "staticwebassets/images/chinook_no_bg.png"
+    },
+    {
+      "Id": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/js/script.js",
+      "PackagePath": "staticwebassets/js/script.js"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.build.project.props",
+      "PackagePath": "build\\project.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.buildMultiTargeting.project.props",
+      "PackagePath": "buildMultiTargeting\\project.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.buildTransitive.project.props",
+      "PackagePath": "buildTransitive\\project.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.project.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

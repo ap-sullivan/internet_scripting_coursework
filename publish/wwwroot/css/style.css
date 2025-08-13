@@ -1,0 +1,507 @@
+/* global and reusable styles */
+
+:root {
+  --color-primary-darkest: #3d3d3d;
+  --color-primary-dark: #7a7a7a;
+  --color-primary: #cccccc;
+  --color-primary-light: #d6d6d6;
+  --color-primary-lightest: #e6e6e6;
+  --color-white: #fafafa;
+  --color-black: #141414;
+  --color-error: #ff0000;
+  --color-green: #00b400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  ::selection { 
+        background: var(--color-black);
+        color: var(--color-white);}
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace, sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--color-primary-lightest);
+}
+
+/* navigation   */
+nav {
+  font-size: 1.8rem;
+  height: 9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6rem;
+  background-color: var(--color-primary-light);
+  color: var(--color-black);
+}
+
+.logo {
+  height: 9rem;
+  width: auto;
+  margin-left: 2rem;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: 1rem;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color-black);
+ 
+}
+
+nav ul li a:hover {
+  border-bottom: var(--color-primary-darkest) 2px solid;
+  padding-bottom: 0.5rem;
+  transition: all 0.1s ease-in-out;
+}
+
+/* buttons */
+.btn-primary {
+  font-family: inherit;
+  color: var(--color-black);
+  background-color: var(--color-primary-lightest);
+  border: 2px solid var(--color-primary-darkest);
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background-color: var(--color-primary-darkest);
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn-secondary {
+  font-family: inherit;
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-light);
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+  background-color: var(--color-primary-lightest);
+  color: var(--color-black);
+  border-color: var(--color-black);
+}
+
+.btn-filter,
+.btn-clear {
+  display: inline-block;
+  max-width: 12rem;
+  padding: 4px 8px;
+}
+
+.btn-danger:hover {
+  border-color: var(--color-error);
+}
+
+.btn-success:hover {
+  border-color: var(--color-green);
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-primary-light);
+  color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 9rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
+.page-container {
+  min-height: 100vh;
+  padding: 6rem;
+}
+
+.landing-page header,
+.landing-page footer {
+  display: none;
+}
+
+.landing-page {
+  background-color: var(--color-primary-lightest);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 1s ease-out;
+}
+
+.landing-page-logo {
+  width: 50rem;
+  height: auto;
+}
+
+.landing-page-title {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#radial-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200vw;
+  height: 200vh;
+  background: radial-gradient(
+    circle,
+    var(--color-white) 0%,
+    var(--color-black) 100%
+  );
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 1s ease-out;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+
+/* view records page */
+
+.view-page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 16rem;
+}
+
+.view-main-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 2rem 0;
+  text-align: center;
+}
+
+.view-filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 2rem 0;
+}
+
+.filter-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.view-filter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.view-filter-dropdown {
+  /* text-align: ; */
+  font-size: 1.8rem;
+  min-width: 24rem;
+}
+
+.view-filter-input {
+  padding: 0.5rem;
+  min-width: 52rem;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.view-search-input{
+  height: 2.8rem;
+  padding: 3px;
+  font-size: 1.6rem;
+  min-width: 52rem;
+}
+
+.view-no-albums {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-error);
+}
+
+.view-no-albums p {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInOut 2s infinite;
+}
+
+.sort-filters {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.view-insert-album {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 2rem 0;
+}
+
+.view-insert-album p {
+  font-size: 2rem;
+  font-weight: 600;
+
+}
+
+.icon-add-new-album, .icon-hide-add-new-album {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 2.5rem;
+  color: var(--color-primary-darkest);
+}
+
+.icon-add-new-album {
+  animation: fadeInOut 5s infinite ease-in-out;
+}
+
+.icon-add-new-album:hover, .icon-hide-add-new-album:hover {
+  opacity: .8 ;
+  cursor: pointer;
+}
+
+.add-album {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.add-album-inputs {
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.add-album-label-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.add-album-label-wrap label {
+  font-size: 1.8rem;
+  width: 16rem;
+}
+
+.add-album-label-wrap input {
+  width: 20rem;
+  font-size: 1.6rem;
+  padding: 2px
+}
+
+
+/* add tracks section */
+
+#hide-new-album {
+  display: none;
+}
+
+
+.track {
+  font-size: 1.8rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#add-track {
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+.track-input {
+  font-size: 1.8rem;
+  width: 40rem;
+  padding: 2px;
+}
+
+/* all albums table */
+
+.view-table {
+  width: 100%;
+
+}
+
+.view-table-albumID {
+  width: 6rem;
+}
+
+.view-table-title {
+  width: 30rem;
+} 
+
+.view-table-artist {
+  width: 30rem;
+}
+
+.view-table-actions {
+  width: 8rem;
+}
+
+.view-albumID, .view-title, .view-album {
+  padding-left: 0.5rem;
+}
+
+.view-actions {
+  padding: 1rem;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+
+/* media queries for view page */
+
+@media (max-width: 48em) {
+
+
+  .view-filter-form {
+    flex-direction: column;
+  }
+
+  .view-filter-dropdown {
+    margin: 0 2rem;
+    max-width: 6rem;
+  }
+
+
+  .view-table {
+    margin: 0 1rem;
+  }
+
+
+  .view-actions {
+    flex-direction: column;
+  }
+
+}
+
+/* update album */
+
+.update-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.form-container {
+  background-color: var(--color-primary-lightest);
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  /* margin-top: 5rem; */
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.update-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.update-form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.update-label {
+  font-size: 1.8rem;
+  width: 15rem;
+}
+
+.update-input {
+  width: 40rem;
+  font-size: 1.6rem;
+  padding: 2px;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.btn-back-to-view {
+  margin-top: 2rem;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+

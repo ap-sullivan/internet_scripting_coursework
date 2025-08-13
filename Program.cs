@@ -6,7 +6,7 @@ var app = builder.Build();
 
 app.UseDefaultFiles();
 
-// use so css hot-reloads
+// Use so CSS hot-reloads
 app.UseStaticFiles(new StaticFileOptions
 {
     OnPrepareResponse = ctx =>
@@ -15,7 +15,10 @@ app.UseStaticFiles(new StaticFileOptions
     }
 });
 
-
 app.MapRazorPages();
 
+// Allow Azure to set the port
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5073";
+app.Urls.Add($"http://*:{port}");
+    
 app.Run();

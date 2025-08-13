@@ -9,39 +9,39 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = project
 build_property.RootNamespace = project
-build_property.ProjectDir = /Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/
+build_property.ProjectDir = /Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project
+build_property.MSBuildProjectDirectory = /Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/Pages/Delete.cshtml]
+[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/Pages/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/Pages/Index.cshtml]
+[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/Pages/Insert.cshtml]
+[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/Pages/Insert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5zZXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/Pages/Shared/_Layout.cshtml]
+[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/Pages/Update.cshtml]
+[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/Pages/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/Pages/View.cshtml]
+[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/Pages/View.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project/Pages/_ViewStart.cshtml]
+[/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

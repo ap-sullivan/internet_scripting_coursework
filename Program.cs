@@ -2,6 +2,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 
+// Allow Azure to set the port
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5073";
+builder.WebHost.UseUrls($"http://*:{port}"); // <-- moved here
+
 var app = builder.Build();
 
 app.UseDefaultFiles();
@@ -16,10 +20,5 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 app.MapRazorPages();
-
-// Allow Azure to set the port
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5073";
-app.Urls = new[] { $"http://*:{port}" };
-
 
 app.Run();

@@ -11,7 +11,7 @@
         
 
         <h1 class="view-main-heading">@Model.Heading</h1>
-
+        <div class="filter-wrap">
         <div class="view-filters">
 
             <div class="filter-search">
@@ -39,12 +39,13 @@
 
             <form method="get" class="view-filter-form">
                 <label for="search" class="view-filter-dropdown">Search Album/Artist:</label>
-                <input type="text" name="search" placeholder="Search album or artist..." value="@Request.Query["search"]" class="view-search-input"/>
+                <input type="text" name="search" id="search" placeholder="Search album or artist..." value="@Request.Query["search"]" class="view-search-input"/>
                  <div class="filter-buttons">
                 <button type="submit" class="btn-primary btn-filter">Search</button>
                 <a href="/View" class="btn-secondary btn-clear">Clear</a>
                 </div>
             </form>
+        </div>
         </div>
                 <div class="sort-filters">
 
@@ -154,7 +155,7 @@
 
                             <form action="/update/@albumArtist.AlbumId" method="get">
                                 @Html.AntiForgeryToken()
-                                <input type="submit" value="View/Update" class="btn-primary">
+                                <input type="submit" value="View" class="btn-primary">
                             </form>
 
                             <form action="/Delete" method="post" onsubmit="return confirmDelete()">

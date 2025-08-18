@@ -11,14 +11,11 @@
         
 
         <h1 class="view-main-heading">@Model.Heading</h1>
-        <div class="filter-wrap">
-        <div class="view-filters">
 
-            <div class="filter-search">
-            <form method="get " action="" class="view-filter-form">
-                <label for="filterArtist" class="view-filter-dropdown">Filter by Artist:</label>
-
-                <select name="tbxArtist" id="filterArtist" class="view-filter-input">
+            <div class="search-sort">
+            <form method="get " action="" class="">
+                <label for="filterArtist" class="search-sort-label">Filter by Artist:</label>
+                <select name="tbxArtist" id="filterArtist" class="filter-select">
                     <option value="">- Select an Artist -</option>
                     @foreach (var artist in Model.Artists.Select(a => a.Name).Distinct())
                     {
@@ -28,25 +25,22 @@
                         </option>
                     }
                 </select>
-                <div class="filter-buttons">
-
-             
-                <button type="submit" class="btn-primary btn-filter">Go</button>
-
-                <a href="/View" class="btn-secondary btn-clear">Clear</a>
-   </div>
-            </form>
-
-            <form method="get" class="view-filter-form">
-                <label for="search" class="view-filter-dropdown">Search Album/Artist:</label>
-                <input type="text" name="search" id="search" placeholder="Search album or artist..." value="@Request.Query["search"]" class="view-search-input"/>
-                 <div class="filter-buttons">
-                <button type="submit" class="btn-primary btn-filter">Search</button>
-                <a href="/View" class="btn-secondary btn-clear">Clear</a>
+                <div class="filter-buttons">    
+                <button type="submit" class="btn-primary">Go</button>
+                <a href="/View" class="btn-secondary">Clear</a>
                 </div>
             </form>
-        </div>
-        </div>
+
+            <form method="get" class="">
+                <label for="search" class="search-sort-label">Search Album/Artist:</label>
+                <input type="text" name="search" id="search" placeholder="Search album or artist..." value="@Request.Query["search"]" class="search-input"/>
+                 <div class="">
+                <button type="submit" class="btn-primary">Search</button>
+                <a href="/View" class="btn-secondary">Clear</a>
+                </div>
+            </form>
+       
+   
                 <div class="sort-filters">
 
             <form method="get">
@@ -70,7 +64,7 @@
             </form>
                 </div>
                  <a href="/View" class="btn-secondary btn-clear">Clear</a>
-
+         </div>
             <div class="view-insert-album">
 
                 <p>Add new album
@@ -134,6 +128,7 @@
            <a href="/View" class="btn-secondary btn-clear">Clear</a>
     </div>
 } else {
+    <div class="table-container">
         <table border="1" class="view-table">
             <thead>
                 <tr>
@@ -169,6 +164,7 @@
                 }
             </tbody>
         </table>
+         </div>
 }
     </div>
 

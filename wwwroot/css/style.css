@@ -91,6 +91,10 @@ nav ul li a:hover {
   border: solid 1px black;
 }
 
+.btn-remove {
+  max-width: 8rem;
+}
+
 .btn-primary {
   background-color: var(--color-primary-lightest);
 }
@@ -372,10 +376,27 @@ footer {
   margin: 2rem 0rem 1rem 0rem;
 }
 
+.track-label {
+  width: 12rem;
+}
+
 .track-input {
   font-size: 1.8rem;
   width: 40rem;
   padding: 2px;
+} 
+
+@media (max-width: 48em) {
+.track-input {
+  font-size: 1.8rem;
+  width: 24rem;
+  padding: 2px;
+} 
+
+.track-label {
+  width: 12rem;
+  font-size: 1.6rem;
+}
 }
 
 /* all albums table */

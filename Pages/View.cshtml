@@ -34,7 +34,7 @@
             <form method="get" class="">
                 <label for="search" class="search-sort-label">Search Album/Artist:</label>
                 <input type="text" name="search" id="search" placeholder="Search album or artist..." value="@Request.Query["search"]" class="search-input"/>
-                 <div class="">
+                 <div class="filter-buttons">
                 <button type="submit" class="btn-primary">Search</button>
                 <a href="/View" class="btn-secondary">Clear</a>
                 </div>
@@ -198,7 +198,7 @@
                 .attr('id', `tbxTrack${trackCounter}`)
                 .attr('class', 'track-input');
 
-            const removeButton = $('<button>').text('Remove').attr('class', 'btn-primary btn-danger');
+            const removeButton = $('<button>').text('Remove').attr('class', 'btn-primary btn-danger btn-remove');
 
 
             removeButton.click(function () {

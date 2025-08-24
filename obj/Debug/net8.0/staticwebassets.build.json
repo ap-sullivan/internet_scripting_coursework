@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NPftmsq2rnJzZtbx0xOMOLIB7g6cWbOEeSFfbn0dRFM=",
+  "Hash": "ttW4jvokAgHxZNS6RZ4LN9od+ssd93t+98Hk2ccylE4=",
   "Source": "project",
   "BasePath": "_content/project",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "project/wwwroot",
       "Source": "project",
-      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/Year3/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/",
       "BasePath": "_content/project",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/css/style.css",
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/Year3/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/css/style.css",
       "SourceId": "project",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/Year3/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/",
       "BasePath": "_content/project",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot/css/style.css"
     },
     {
-      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/images/chinook_no_bg.png",
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/Year3/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/images/chinook_no_bg.png",
       "SourceId": "project",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/Year3/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/",
       "BasePath": "_content/project",
       "RelativePath": "images/chinook_no_bg.png",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot/images/chinook_no_bg.png"
     },
     {
-      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/images/chinook.png",
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/Year3/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/images/chinook.png",
       "SourceId": "project",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/Year3/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/",
       "BasePath": "_content/project",
       "RelativePath": "images/chinook.png",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot/images/chinook.png"
     },
     {
-      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/js/script.js",
+      "Identity": "/Users/andrew/Documents/01.College_Courses/17.UWS/Year3/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/js/script.js",
       "SourceId": "project",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/",
+      "ContentRoot": "/Users/andrew/Documents/01.College_Courses/17.UWS/Year3/5.Internet Scripting/0.Coursework/CourseworkTwoB01740777/project 2/wwwroot/",
       "BasePath": "_content/project",
       "RelativePath": "js/script.js",
       "AssetKind": "All",

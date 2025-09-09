@@ -226,6 +226,7 @@ footer {
 .filter-select, .search-input {
   width: 72rem;
   margin-bottom: 1rem;
+  height: 2.2rem;
 }
 
 .filter-buttons {
@@ -234,7 +235,6 @@ footer {
 
 .search-input {
   display: inline-block;
-  height: 2.2rem;
   
 }
 

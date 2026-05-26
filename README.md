@@ -1,3 +1,7 @@
-# internet_scripting_coursework
+# Year 3 Internet Scripting Coursework 
 
-deploying to azure
+Built using C# / Razor templating engine and ASP.net
+
+Deployed to the web using Azure App Service
+
+https://chinookuws.azurewebsites.net/
